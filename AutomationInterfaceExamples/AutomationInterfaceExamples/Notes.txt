@@ -1,0 +1,95 @@
+﻿
+
+Windows Files:
+
+	Directory 
+	- Create
+	- Open
+	- Delete
+
+	File
+	- Create
+	- Open
+	- Close
+	- Delete
+
+	List Box
+	- Show list of files in directory
+
+
+
+Windows Directories:
+
+	2 List Boxes
+	- Update List
+	- Open Selected
+	- Delete Selected
+	- Rename File
+	- Select Direction
+		- Copy File
+		- Move File
+
+
+Windows Active Files:
+	List Box
+	- Show list of open Notepad instances with file names
+	- Select Notepad instance
+	- Edit text
+		- append
+		- live edit
+
+Visual Studio:
+	- Detect Installed Versions and Show List
+	- Select version and open Visual Studio IDE
+
+	- Show list of open Visual Studio instances
+	- Select Visual Studio instance
+	- Close Visual Studio instance
+
+
+Visual Studio Solutions:
+	- Open Solution
+	- Close Solution
+	- Add Project
+	- Remove Project
+
+
+
+TwinCAT Project:
+	- Add Project
+	- Build Project
+	- Activate Project
+	- Save Project
+
+
+TwinCAT Router
+	- Run Mode
+	- Config Mode
+
+NC
+	- Add Axis
+	- Rename Axis
+	- Delete Axis
+
+PLC
+	- Add Plc Project
+	- Add Libraries
+	- Add Folders
+	- Add POUs
+	- Modify Declaration
+	- Modify Implementation
+	- Add Variables
+	- Add Methods
+	- Add Properties
+	- Consume XML
+	- Produce XML
+
+
+
+
+
+
+
+
+
+
