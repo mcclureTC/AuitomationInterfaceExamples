@@ -42,7 +42,7 @@
             CreateDirButtonWinFiles = new Button();
             DirPathLabelWinFiles = new Label();
             DirPathTextBoxWinFiles = new TextBox();
-            WinDirAdvTabPage = new TabPage();
+            WinDirTabPage = new TabPage();
             CurFromDirLabel = new Label();
             MoveButton = new Button();
             CopyButton = new Button();
@@ -70,14 +70,14 @@
             PlcProjTabPage = new TabPage();
             tabControl.SuspendLayout();
             WinFilesTabPage.SuspendLayout();
-            WinDirAdvTabPage.SuspendLayout();
+            WinDirTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl
             // 
             tabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tabControl.Controls.Add(WinFilesTabPage);
-            tabControl.Controls.Add(WinDirAdvTabPage);
+            tabControl.Controls.Add(WinDirTabPage);
             tabControl.Controls.Add(VisSudioTabPage);
             tabControl.Controls.Add(SlnTabPage);
             tabControl.Controls.Add(TcProjectTabPage);
@@ -222,36 +222,36 @@
             DirPathTextBoxWinFiles.TabIndex = 5;
             DirPathTextBoxWinFiles.Text = "C:\\TcAiEx\\temp";
             // 
-            // WinDirAdvTabPage
+            // WinDirTabPage
             // 
-            WinDirAdvTabPage.Controls.Add(CurFromDirLabel);
-            WinDirAdvTabPage.Controls.Add(MoveButton);
-            WinDirAdvTabPage.Controls.Add(CopyButton);
-            WinDirAdvTabPage.Controls.Add(ToDirTextBox);
-            WinDirAdvTabPage.Controls.Add(FromDirTextBox);
-            WinDirAdvTabPage.Controls.Add(ToLabel);
-            WinDirAdvTabPage.Controls.Add(FromLabel);
-            WinDirAdvTabPage.Controls.Add(DeleteSelectedButton);
-            WinDirAdvTabPage.Controls.Add(OpenSelectedButton);
-            WinDirAdvTabPage.Controls.Add(UpdateListBox);
-            WinDirAdvTabPage.Controls.Add(FileListBox);
-            WinDirAdvTabPage.Controls.Add(DelFileButton);
-            WinDirAdvTabPage.Controls.Add(OpenFileButton);
-            WinDirAdvTabPage.Controls.Add(CreateFileButton);
-            WinDirAdvTabPage.Controls.Add(FileNameTextBox);
-            WinDirAdvTabPage.Controls.Add(FileNameLabel);
-            WinDirAdvTabPage.Controls.Add(DelDirButton);
-            WinDirAdvTabPage.Controls.Add(OpenDirButton);
-            WinDirAdvTabPage.Controls.Add(CreateDirButton);
-            WinDirAdvTabPage.Controls.Add(DirPathLabel);
-            WinDirAdvTabPage.Controls.Add(DirPathTextBox);
-            WinDirAdvTabPage.Location = new Point(4, 24);
-            WinDirAdvTabPage.Name = "WinDirAdvTabPage";
-            WinDirAdvTabPage.Padding = new Padding(3);
-            WinDirAdvTabPage.Size = new Size(999, 535);
-            WinDirAdvTabPage.TabIndex = 2;
-            WinDirAdvTabPage.Text = "Windows Directory (Adv)";
-            WinDirAdvTabPage.UseVisualStyleBackColor = true;
+            WinDirTabPage.Controls.Add(CurFromDirLabel);
+            WinDirTabPage.Controls.Add(MoveButton);
+            WinDirTabPage.Controls.Add(CopyButton);
+            WinDirTabPage.Controls.Add(ToDirTextBox);
+            WinDirTabPage.Controls.Add(FromDirTextBox);
+            WinDirTabPage.Controls.Add(ToLabel);
+            WinDirTabPage.Controls.Add(FromLabel);
+            WinDirTabPage.Controls.Add(DeleteSelectedButton);
+            WinDirTabPage.Controls.Add(OpenSelectedButton);
+            WinDirTabPage.Controls.Add(UpdateListBox);
+            WinDirTabPage.Controls.Add(FileListBox);
+            WinDirTabPage.Controls.Add(DelFileButton);
+            WinDirTabPage.Controls.Add(OpenFileButton);
+            WinDirTabPage.Controls.Add(CreateFileButton);
+            WinDirTabPage.Controls.Add(FileNameTextBox);
+            WinDirTabPage.Controls.Add(FileNameLabel);
+            WinDirTabPage.Controls.Add(DelDirButton);
+            WinDirTabPage.Controls.Add(OpenDirButton);
+            WinDirTabPage.Controls.Add(CreateDirButton);
+            WinDirTabPage.Controls.Add(DirPathLabel);
+            WinDirTabPage.Controls.Add(DirPathTextBox);
+            WinDirTabPage.Location = new Point(4, 24);
+            WinDirTabPage.Name = "WinDirTabPage";
+            WinDirTabPage.Padding = new Padding(3);
+            WinDirTabPage.Size = new Size(999, 535);
+            WinDirTabPage.TabIndex = 2;
+            WinDirTabPage.Text = "Windows Directory";
+            WinDirTabPage.UseVisualStyleBackColor = true;
             // 
             // CurFromDirLabel
             // 
@@ -270,6 +270,7 @@
             MoveButton.TabIndex = 20;
             MoveButton.Text = "Move File";
             MoveButton.UseVisualStyleBackColor = true;
+            MoveButton.Click += MoveButton_Click;
             // 
             // CopyButton
             // 
@@ -497,15 +498,15 @@
             tabControl.ResumeLayout(false);
             WinFilesTabPage.ResumeLayout(false);
             WinFilesTabPage.PerformLayout();
-            WinDirAdvTabPage.ResumeLayout(false);
-            WinDirAdvTabPage.PerformLayout();
+            WinDirTabPage.ResumeLayout(false);
+            WinDirTabPage.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private TabControl tabControl;
-        private TabPage WinDirAdvTabPage;
+        private TabPage WinDirTabPage;
         private TabPage VisSudioTabPage;
         private TabPage SlnTabPage;
         private TabPage TcProjectTabPage;
