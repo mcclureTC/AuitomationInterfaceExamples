@@ -1,4 +1,4 @@
-namespace TcAiExamples
+﻿namespace TcAiExamples
 {
     partial class MainForm
     {

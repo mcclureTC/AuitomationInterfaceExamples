@@ -186,9 +186,88 @@ namespace TcAiExamples
             // Update the label with the current directory path
             DirLabelWinFiles.Text = $"Directory: {DirPathTextBoxWinFiles.Text}";
         }
+        private void OpenFileButtonWinFiles_Click(object sender, EventArgs e)
+        {
+            // Open the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
+            string fileName = FileNameTextBoxWinFiles.Text;
+            // Check if the path and file name are valid
+            if (string.IsNullOrEmpty(path))
+            {
+                MessageBox.Show("Please enter a valid path.");
+                return;
+            }
+            if (string.IsNullOrEmpty(fileName))
+            {
+                MessageBox.Show("Please enter a valid file name.");
+                return;
+            }
+            try
+            {
+                string filePath = Path.Combine(path, fileName);
+                if (File.Exists(filePath))
+                {
+                    System.Diagnostics.Process.Start("explorer.exe", filePath);
+                }
+                else
+                {
+                    MessageBox.Show($"File does not exist at {filePath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening file: {ex.Message}");
+            }
+            // Update the DirListBoxWinFiles.text
+            UpdateListBoxWinFiles();
+        }
+
+        private void DelFileButtonWinFiles_Click(object sender, EventArgs e)
+        {
+            // Delete the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
+            string fileName = FileNameTextBoxWinFiles.Text;
+            if (string.IsNullOrEmpty(path))
+            {
+                MessageBox.Show("Please enter a valid path.");
+                return;
+            }
+            if (string.IsNullOrEmpty(fileName))
+            {
+                MessageBox.Show("Please enter a valid file name.");
+                return;
+            }
+            try
+            {
+                string filePath = Path.Combine(path, fileName);
+                if (File.Exists(filePath))
+                {
+                    // Confirm deletion
+                    var result = MessageBox.Show($"Are you sure you want to delete the file at {filePath}?", "Confirm Deletion", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.No)
+                    {
+                        return;
+                    }
+                    // Delete the file
+                    File.Delete(filePath);
+                    MessageBox.Show($"File deleted at {filePath}");
+                }
+                else
+                {
+                    MessageBox.Show($"File does not exist at {filePath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error deleting file: {ex.Message}");
+            }
+            // Update the DirListBoxWinFiles.text
+            UpdateListBoxWinFiles();
+        }
+
         #endregion
 
-        #region WinDirAdv
+        #region WinDir
         private void CreateDirButton_Click(object sender, EventArgs e)
         {
             //Create a new directory at DirPathTextBox.Text
@@ -627,83 +706,7 @@ namespace TcAiExamples
 
         }
 
-        private void OpenFileButtonWinFiles_Click(object sender, EventArgs e)
-        {
-            // Open the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
-            string path = DirPathTextBoxWinFiles.Text;
-            string fileName = FileNameTextBoxWinFiles.Text;
-            // Check if the path and file name are valid
-            if (string.IsNullOrEmpty(path))
-            {
-                MessageBox.Show("Please enter a valid path.");
-                return;
-            }
-            if (string.IsNullOrEmpty(fileName))
-            {
-                MessageBox.Show("Please enter a valid file name.");
-                return;
-            }
-            try
-            {
-                string filePath = Path.Combine(path, fileName);
-                if (File.Exists(filePath))
-                {
-                    System.Diagnostics.Process.Start("explorer.exe", filePath);
-                }
-                else
-                {
-                    MessageBox.Show($"File does not exist at {filePath}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error opening file: {ex.Message}");
-            }
-            // Update the DirListBoxWinFiles.text
-            UpdateListBoxWinFiles();
-        }
-
-        private void DelFileButtonWinFiles_Click(object sender, EventArgs e)
-        {
-            // Delete the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
-            string path = DirPathTextBoxWinFiles.Text;
-            string fileName = FileNameTextBoxWinFiles.Text;
-            if (string.IsNullOrEmpty(path))
-            {
-                MessageBox.Show("Please enter a valid path.");
-                return;
-            }
-            if (string.IsNullOrEmpty(fileName))
-            {
-                MessageBox.Show("Please enter a valid file name.");
-                return;
-            }
-            try
-            {
-                string filePath = Path.Combine(path, fileName);
-                if (File.Exists(filePath))
-                {
-                    // Confirm deletion
-                    var result = MessageBox.Show($"Are you sure you want to delete the file at {filePath}?", "Confirm Deletion", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.No)
-                    {
-                        return;
-                    }
-                    // Delete the file
-                    File.Delete(filePath);
-                    MessageBox.Show($"File deleted at {filePath}");
-                }
-                else
-                {
-                    MessageBox.Show($"File does not exist at {filePath}");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error deleting file: {ex.Message}");
-            }
-            // Update the DirListBoxWinFiles.text
-            UpdateListBoxWinFiles();
-        }
+  
+      
     }
 }
