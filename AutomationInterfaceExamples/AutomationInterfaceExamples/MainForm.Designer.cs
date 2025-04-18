@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             tabControl = new TabControl();
-            WinDirBasicTabPage = new TabPage();
-            DirLabelBasic = new Label();
-            DirListBoxBasic = new ListBox();
-            DelFileButtonBasic = new Button();
-            OpenFileButtonBasic = new Button();
-            CreateFileButtonBasic = new Button();
-            FileNameTextBoxBasic = new TextBox();
-            FileNameLabelBasic = new Label();
-            DelDirButtonBasic = new Button();
-            OpenDirButtonBasic = new Button();
-            CreateDirButtonBasic = new Button();
-            DirPathLabelBasic = new Label();
-            DirPathTextBoxBasic = new TextBox();
+            WinFilesTabPage = new TabPage();
+            DirLabelWinFiles = new Label();
+            DirListBoxWinFiles = new ListBox();
+            DelFileButtonWinFiles = new Button();
+            OpenFileButtonWinFiles = new Button();
+            CreateFileButtonWinFiles = new Button();
+            FileNameTextBoxWinFiles = new TextBox();
+            FileNameLabelWinFiles = new Label();
+            DelDirButtonWinFiles = new Button();
+            OpenDirButtonWinFiles = new Button();
+            CreateDirButtonWinFiles = new Button();
+            DirPathLabelWinFiles = new Label();
+            DirPathTextBoxWinFiles = new TextBox();
             WinDirAdvTabPage = new TabPage();
             CurFromDirLabel = new Label();
             MoveButton = new Button();
@@ -69,14 +69,14 @@
             TcProjectTabPage = new TabPage();
             PlcProjTabPage = new TabPage();
             tabControl.SuspendLayout();
-            WinDirBasicTabPage.SuspendLayout();
+            WinFilesTabPage.SuspendLayout();
             WinDirAdvTabPage.SuspendLayout();
             SuspendLayout();
             // 
             // tabControl
             // 
             tabControl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tabControl.Controls.Add(WinDirBasicTabPage);
+            tabControl.Controls.Add(WinFilesTabPage);
             tabControl.Controls.Add(WinDirAdvTabPage);
             tabControl.Controls.Add(VisSudioTabPage);
             tabControl.Controls.Add(SlnTabPage);
@@ -89,138 +89,138 @@
             tabControl.TabIndex = 0;
             tabControl.Selecting += tabControl_Selecting;
             // 
-            // WinDirBasicTabPage
+            // WinFilesTabPage
             // 
-            WinDirBasicTabPage.Controls.Add(DirLabelBasic);
-            WinDirBasicTabPage.Controls.Add(DirListBoxBasic);
-            WinDirBasicTabPage.Controls.Add(DelFileButtonBasic);
-            WinDirBasicTabPage.Controls.Add(OpenFileButtonBasic);
-            WinDirBasicTabPage.Controls.Add(CreateFileButtonBasic);
-            WinDirBasicTabPage.Controls.Add(FileNameTextBoxBasic);
-            WinDirBasicTabPage.Controls.Add(FileNameLabelBasic);
-            WinDirBasicTabPage.Controls.Add(DelDirButtonBasic);
-            WinDirBasicTabPage.Controls.Add(OpenDirButtonBasic);
-            WinDirBasicTabPage.Controls.Add(CreateDirButtonBasic);
-            WinDirBasicTabPage.Controls.Add(DirPathLabelBasic);
-            WinDirBasicTabPage.Controls.Add(DirPathTextBoxBasic);
-            WinDirBasicTabPage.Location = new Point(4, 24);
-            WinDirBasicTabPage.Name = "WinDirBasicTabPage";
-            WinDirBasicTabPage.Padding = new Padding(3);
-            WinDirBasicTabPage.Size = new Size(999, 535);
-            WinDirBasicTabPage.TabIndex = 5;
-            WinDirBasicTabPage.Text = "Windows Directory (Basic)";
-            WinDirBasicTabPage.UseVisualStyleBackColor = true;
+            WinFilesTabPage.Controls.Add(DirLabelWinFiles);
+            WinFilesTabPage.Controls.Add(DirListBoxWinFiles);
+            WinFilesTabPage.Controls.Add(DelFileButtonWinFiles);
+            WinFilesTabPage.Controls.Add(OpenFileButtonWinFiles);
+            WinFilesTabPage.Controls.Add(CreateFileButtonWinFiles);
+            WinFilesTabPage.Controls.Add(FileNameTextBoxWinFiles);
+            WinFilesTabPage.Controls.Add(FileNameLabelWinFiles);
+            WinFilesTabPage.Controls.Add(DelDirButtonWinFiles);
+            WinFilesTabPage.Controls.Add(OpenDirButtonWinFiles);
+            WinFilesTabPage.Controls.Add(CreateDirButtonWinFiles);
+            WinFilesTabPage.Controls.Add(DirPathLabelWinFiles);
+            WinFilesTabPage.Controls.Add(DirPathTextBoxWinFiles);
+            WinFilesTabPage.Location = new Point(4, 24);
+            WinFilesTabPage.Name = "WinFilesTabPage";
+            WinFilesTabPage.Padding = new Padding(3);
+            WinFilesTabPage.Size = new Size(999, 535);
+            WinFilesTabPage.TabIndex = 5;
+            WinFilesTabPage.Text = "Windows Files";
+            WinFilesTabPage.UseVisualStyleBackColor = true;
             // 
-            // DirLabelBasic
+            // DirLabelWinFiles
             // 
-            DirLabelBasic.AutoSize = true;
-            DirLabelBasic.Location = new Point(429, 19);
-            DirLabelBasic.Name = "DirLabelBasic";
-            DirLabelBasic.Size = new Size(58, 15);
-            DirLabelBasic.TabIndex = 23;
-            DirLabelBasic.Text = "Directory:";
+            DirLabelWinFiles.AutoSize = true;
+            DirLabelWinFiles.Location = new Point(429, 19);
+            DirLabelWinFiles.Name = "DirLabelWinFiles";
+            DirLabelWinFiles.Size = new Size(58, 15);
+            DirLabelWinFiles.TabIndex = 23;
+            DirLabelWinFiles.Text = "Directory:";
             // 
-            // DirListBoxBasic
+            // DirListBoxWinFiles
             // 
-            DirListBoxBasic.FormattingEnabled = true;
-            DirListBoxBasic.Location = new Point(429, 37);
-            DirListBoxBasic.Name = "DirListBoxBasic";
-            DirListBoxBasic.Size = new Size(372, 154);
-            DirListBoxBasic.TabIndex = 22;
+            DirListBoxWinFiles.FormattingEnabled = true;
+            DirListBoxWinFiles.Location = new Point(429, 37);
+            DirListBoxWinFiles.Name = "DirListBoxWinFiles";
+            DirListBoxWinFiles.Size = new Size(372, 154);
+            DirListBoxWinFiles.TabIndex = 22;
             // 
-            // DelFileButtonBasic
+            // DelFileButtonWinFiles
             // 
-            DelFileButtonBasic.Location = new Point(258, 168);
-            DelFileButtonBasic.Name = "DelFileButtonBasic";
-            DelFileButtonBasic.Size = new Size(120, 23);
-            DelFileButtonBasic.TabIndex = 14;
-            DelFileButtonBasic.Text = "Delete File";
-            DelFileButtonBasic.UseVisualStyleBackColor = true;
-            DelFileButtonBasic.Click += DelFileButtonBasic_Click;
+            DelFileButtonWinFiles.Location = new Point(258, 168);
+            DelFileButtonWinFiles.Name = "DelFileButtonWinFiles";
+            DelFileButtonWinFiles.Size = new Size(120, 23);
+            DelFileButtonWinFiles.TabIndex = 14;
+            DelFileButtonWinFiles.Text = "Delete File";
+            DelFileButtonWinFiles.UseVisualStyleBackColor = true;
+            DelFileButtonWinFiles.Click += DelFileButtonWinFiles_Click;
             // 
-            // OpenFileButtonBasic
+            // OpenFileButtonWinFiles
             // 
-            OpenFileButtonBasic.Location = new Point(132, 168);
-            OpenFileButtonBasic.Name = "OpenFileButtonBasic";
-            OpenFileButtonBasic.Size = new Size(120, 23);
-            OpenFileButtonBasic.TabIndex = 13;
-            OpenFileButtonBasic.Text = "Open File";
-            OpenFileButtonBasic.UseVisualStyleBackColor = true;
-            OpenFileButtonBasic.Click += OpenFileButtonBasic_Click;
+            OpenFileButtonWinFiles.Location = new Point(132, 168);
+            OpenFileButtonWinFiles.Name = "OpenFileButtonWinFiles";
+            OpenFileButtonWinFiles.Size = new Size(120, 23);
+            OpenFileButtonWinFiles.TabIndex = 13;
+            OpenFileButtonWinFiles.Text = "Open File";
+            OpenFileButtonWinFiles.UseVisualStyleBackColor = true;
+            OpenFileButtonWinFiles.Click += OpenFileButtonWinFiles_Click;
             // 
-            // CreateFileButtonBasic
+            // CreateFileButtonWinFiles
             // 
-            CreateFileButtonBasic.Location = new Point(6, 168);
-            CreateFileButtonBasic.Name = "CreateFileButtonBasic";
-            CreateFileButtonBasic.Size = new Size(120, 23);
-            CreateFileButtonBasic.TabIndex = 12;
-            CreateFileButtonBasic.Text = "Create File";
-            CreateFileButtonBasic.UseVisualStyleBackColor = true;
-            CreateFileButtonBasic.Click += CreateFileButtonBasic_Click;
+            CreateFileButtonWinFiles.Location = new Point(6, 168);
+            CreateFileButtonWinFiles.Name = "CreateFileButtonWinFiles";
+            CreateFileButtonWinFiles.Size = new Size(120, 23);
+            CreateFileButtonWinFiles.TabIndex = 12;
+            CreateFileButtonWinFiles.Text = "Create File";
+            CreateFileButtonWinFiles.UseVisualStyleBackColor = true;
+            CreateFileButtonWinFiles.Click += CreateFileButtonWinFiles_Click;
             // 
-            // FileNameTextBoxBasic
+            // FileNameTextBoxWinFiles
             // 
-            FileNameTextBoxBasic.Location = new Point(6, 139);
-            FileNameTextBoxBasic.Name = "FileNameTextBoxBasic";
-            FileNameTextBoxBasic.Size = new Size(372, 23);
-            FileNameTextBoxBasic.TabIndex = 11;
-            FileNameTextBoxBasic.Text = "NewTextDoc.txt";
+            FileNameTextBoxWinFiles.Location = new Point(6, 139);
+            FileNameTextBoxWinFiles.Name = "FileNameTextBoxWinFiles";
+            FileNameTextBoxWinFiles.Size = new Size(372, 23);
+            FileNameTextBoxWinFiles.TabIndex = 11;
+            FileNameTextBoxWinFiles.Text = "NewTextDoc.txt";
             // 
-            // FileNameLabelBasic
+            // FileNameLabelWinFiles
             // 
-            FileNameLabelBasic.AutoSize = true;
-            FileNameLabelBasic.Location = new Point(6, 121);
-            FileNameLabelBasic.Name = "FileNameLabelBasic";
-            FileNameLabelBasic.Size = new Size(137, 15);
-            FileNameLabelBasic.TabIndex = 10;
-            FileNameLabelBasic.Text = "File Name and Extension";
+            FileNameLabelWinFiles.AutoSize = true;
+            FileNameLabelWinFiles.Location = new Point(6, 121);
+            FileNameLabelWinFiles.Name = "FileNameLabelWinFiles";
+            FileNameLabelWinFiles.Size = new Size(137, 15);
+            FileNameLabelWinFiles.TabIndex = 10;
+            FileNameLabelWinFiles.Text = "File Name and Extension";
             // 
-            // DelDirButtonBasic
+            // DelDirButtonWinFiles
             // 
-            DelDirButtonBasic.Location = new Point(258, 66);
-            DelDirButtonBasic.Name = "DelDirButtonBasic";
-            DelDirButtonBasic.Size = new Size(120, 23);
-            DelDirButtonBasic.TabIndex = 9;
-            DelDirButtonBasic.Text = "Delete Directory";
-            DelDirButtonBasic.UseVisualStyleBackColor = true;
-            DelDirButtonBasic.Click += DelDirButtonBasic_Click;
+            DelDirButtonWinFiles.Location = new Point(258, 66);
+            DelDirButtonWinFiles.Name = "DelDirButtonWinFiles";
+            DelDirButtonWinFiles.Size = new Size(120, 23);
+            DelDirButtonWinFiles.TabIndex = 9;
+            DelDirButtonWinFiles.Text = "Delete Directory";
+            DelDirButtonWinFiles.UseVisualStyleBackColor = true;
+            DelDirButtonWinFiles.Click += DelDirButtonWinFiles_Click;
             // 
-            // OpenDirButtonBasic
+            // OpenDirButtonWinFiles
             // 
-            OpenDirButtonBasic.Location = new Point(132, 66);
-            OpenDirButtonBasic.Name = "OpenDirButtonBasic";
-            OpenDirButtonBasic.Size = new Size(120, 23);
-            OpenDirButtonBasic.TabIndex = 8;
-            OpenDirButtonBasic.Text = "Open Directory";
-            OpenDirButtonBasic.UseVisualStyleBackColor = true;
-            OpenDirButtonBasic.Click += OpenDirButtonBasic_Click;
+            OpenDirButtonWinFiles.Location = new Point(132, 66);
+            OpenDirButtonWinFiles.Name = "OpenDirButtonWinFiles";
+            OpenDirButtonWinFiles.Size = new Size(120, 23);
+            OpenDirButtonWinFiles.TabIndex = 8;
+            OpenDirButtonWinFiles.Text = "Open Directory";
+            OpenDirButtonWinFiles.UseVisualStyleBackColor = true;
+            OpenDirButtonWinFiles.Click += OpenDirButtonWinFiles_Click;
             // 
-            // CreateDirButtonBasic
+            // CreateDirButtonWinFiles
             // 
-            CreateDirButtonBasic.Location = new Point(6, 66);
-            CreateDirButtonBasic.Name = "CreateDirButtonBasic";
-            CreateDirButtonBasic.Size = new Size(120, 23);
-            CreateDirButtonBasic.TabIndex = 7;
-            CreateDirButtonBasic.Text = "Create Directory";
-            CreateDirButtonBasic.UseVisualStyleBackColor = true;
-            CreateDirButtonBasic.Click += CreateDirButtonBasic_Click;
+            CreateDirButtonWinFiles.Location = new Point(6, 66);
+            CreateDirButtonWinFiles.Name = "CreateDirButtonWinFiles";
+            CreateDirButtonWinFiles.Size = new Size(120, 23);
+            CreateDirButtonWinFiles.TabIndex = 7;
+            CreateDirButtonWinFiles.Text = "Create Directory";
+            CreateDirButtonWinFiles.UseVisualStyleBackColor = true;
+            CreateDirButtonWinFiles.Click += CreateDirButtonWinFiles_Click;
             // 
-            // DirPathLabelBasic
+            // DirPathLabelWinFiles
             // 
-            DirPathLabelBasic.AutoSize = true;
-            DirPathLabelBasic.Location = new Point(6, 19);
-            DirPathLabelBasic.Name = "DirPathLabelBasic";
-            DirPathLabelBasic.Size = new Size(82, 15);
-            DirPathLabelBasic.TabIndex = 6;
-            DirPathLabelBasic.Text = "Directory Path";
+            DirPathLabelWinFiles.AutoSize = true;
+            DirPathLabelWinFiles.Location = new Point(6, 19);
+            DirPathLabelWinFiles.Name = "DirPathLabelWinFiles";
+            DirPathLabelWinFiles.Size = new Size(82, 15);
+            DirPathLabelWinFiles.TabIndex = 6;
+            DirPathLabelWinFiles.Text = "Directory Path";
             // 
-            // DirPathTextBoxBasic
+            // DirPathTextBoxWinFiles
             // 
-            DirPathTextBoxBasic.Location = new Point(6, 37);
-            DirPathTextBoxBasic.Name = "DirPathTextBoxBasic";
-            DirPathTextBoxBasic.Size = new Size(372, 23);
-            DirPathTextBoxBasic.TabIndex = 5;
-            DirPathTextBoxBasic.Text = "C:\\TcAiEx\\temp";
+            DirPathTextBoxWinFiles.Location = new Point(6, 37);
+            DirPathTextBoxWinFiles.Name = "DirPathTextBoxWinFiles";
+            DirPathTextBoxWinFiles.Size = new Size(372, 23);
+            DirPathTextBoxWinFiles.TabIndex = 5;
+            DirPathTextBoxWinFiles.Text = "C:\\TcAiEx\\temp";
             // 
             // WinDirAdvTabPage
             // 
@@ -495,8 +495,8 @@
             Text = "Automation Interface Examples";
             Load += Form1_Load;
             tabControl.ResumeLayout(false);
-            WinDirBasicTabPage.ResumeLayout(false);
-            WinDirBasicTabPage.PerformLayout();
+            WinFilesTabPage.ResumeLayout(false);
+            WinFilesTabPage.PerformLayout();
             WinDirAdvTabPage.ResumeLayout(false);
             WinDirAdvTabPage.PerformLayout();
             ResumeLayout(false);
@@ -531,18 +531,18 @@
         private TextBox FromDirTextBox;
         private Label ToLabel;
         private Label CurFromDirLabel;
-        private TabPage WinDirBasicTabPage;
-        private Label DirLabelBasic;
-        private ListBox DirListBoxBasic;
-        private Button DelFileButtonBasic;
-        private Button OpenFileButtonBasic;
-        private Button CreateFileButtonBasic;
-        private TextBox FileNameTextBoxBasic;
-        private Label FileNameLabelBasic;
-        private Button DelDirButtonBasic;
-        private Button OpenDirButtonBasic;
-        private Button CreateDirButtonBasic;
-        private Label DirPathLabelBasic;
-        private TextBox DirPathTextBoxBasic;
+        private TabPage WinFilesTabPage;
+        private Label DirLabelWinFiles;
+        private ListBox DirListBoxWinFiles;
+        private Button DelFileButtonWinFiles;
+        private Button OpenFileButtonWinFiles;
+        private Button CreateFileButtonWinFiles;
+        private TextBox FileNameTextBoxWinFiles;
+        private Label FileNameLabelWinFiles;
+        private Button DelDirButtonWinFiles;
+        private Button OpenDirButtonWinFiles;
+        private Button CreateDirButtonWinFiles;
+        private Label DirPathLabelWinFiles;
+        private TextBox DirPathTextBoxWinFiles;
     }
 }
