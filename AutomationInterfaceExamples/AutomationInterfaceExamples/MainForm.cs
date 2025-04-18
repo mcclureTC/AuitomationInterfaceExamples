@@ -8,7 +8,7 @@ namespace TcAiExamples
         }
 
 
-        #region WinDirWinFiles
+        #region WinFiles
         private void CreateDirButtonWinFiles_Click(object sender, EventArgs e)
         {
             // Create a new directory at DirPathTextBoxWinFiles.Text
@@ -577,7 +577,7 @@ namespace TcAiExamples
             {
                 UpdateDirLabelWinFiles();
             }
-            else if (e.TabPage == WinDirAdvTabPage)
+            else if (e.TabPage == WinDirTabPage)
             {
                 CurFromDirLabel.Text = $"From Directory: {FromDirTextBox.Text}";
             }
