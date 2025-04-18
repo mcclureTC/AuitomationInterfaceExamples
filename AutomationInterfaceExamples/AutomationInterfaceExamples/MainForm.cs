@@ -8,11 +8,11 @@ namespace TcAiExamples
         }
 
 
-        #region WinDirBasic
-        private void CreateDirButtonBasic_Click(object sender, EventArgs e)
+        #region WinDirWinFiles
+        private void CreateDirButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Create a new directory at DirPathTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
+            // Create a new directory at DirPathTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
             if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show("Please enter a valid path.");
@@ -35,15 +35,15 @@ namespace TcAiExamples
                 MessageBox.Show($"Error creating directory: {ex.Message}");
             }
 
-            UpdateDirLabelBasic();
-            UpdateListBoxBasic();
+            UpdateDirLabelWinFiles();
+            UpdateListBoxWinFiles();
 
         }
 
-        private void OpenDirButtonBasic_Click(object sender, EventArgs e)
+        private void OpenDirButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Open the directory at DirPathTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
+            // Open the directory at DirPathTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
             if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show("Please enter a valid path.");
@@ -64,14 +64,14 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error opening directory: {ex.Message}");
             }
-            UpdateDirLabelBasic();
-            UpdateListBoxBasic();
+            UpdateDirLabelWinFiles();
+            UpdateListBoxWinFiles();
         }
 
-        private void DelDirButtonBasic_Click(object sender, EventArgs e)
+        private void DelDirButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Delete the directory at DirPathTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
+            // Delete the directory at DirPathTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
             if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show("Please enter a valid path.");
@@ -100,14 +100,14 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error deleting directory: {ex.Message}");
             }
-            UpdateDirLabelBasic();
-            UpdateListBoxBasic();
+            UpdateDirLabelWinFiles();
+            UpdateListBoxWinFiles();
         }
 
-        private void UpdateListBoxBasic()
+        private void UpdateListBoxWinFiles()
         {
-            // Update the ListBox with the contents of the directory at DirPathTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
+            // Update the ListBox with the contents of the directory at DirPathTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
             if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show("Please enter a valid path.");
@@ -118,19 +118,19 @@ namespace TcAiExamples
                 if (Directory.Exists(path))
                 {
                     // Clear the ListBox
-                    DirListBoxBasic.Items.Clear();
+                    DirListBoxWinFiles.Items.Clear();
                     // Get the files and directories in the specified path
                     string[] files = Directory.GetFiles(path);
                     string[] directories = Directory.GetDirectories(path);
                     // Add the files to the ListBox
                     foreach (string file in files)
                     {
-                        DirListBoxBasic.Items.Add(Path.GetFileName(file));
+                        DirListBoxWinFiles.Items.Add(Path.GetFileName(file));
                     }
                     // Add the directories to the ListBox
                     foreach (string directory in directories)
                     {
-                        DirListBoxBasic.Items.Add(Path.GetFileName(directory));
+                        DirListBoxWinFiles.Items.Add(Path.GetFileName(directory));
                     }
                 }
                 else
@@ -144,11 +144,11 @@ namespace TcAiExamples
             }
         }
 
-        private void CreateFileButtonBasic_Click(object sender, EventArgs e)
+        private void CreateFileButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Create a new file at DirPathTextBoxBasic.Text with the name at FileNameTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
-            string fileName = FileNameTextBoxBasic.Text;
+            // Create a new file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
+            string fileName = FileNameTextBoxWinFiles.Text;
             // Check if the path and file name are valid
             if (string.IsNullOrEmpty(path))
             {
@@ -177,14 +177,14 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error creating file: {ex.Message}");
             }
-            // Update the DirListBoxBasic.text
-            UpdateListBoxBasic();
+            // Update the DirListBoxWinFiles.text
+            UpdateListBoxWinFiles();
         }
 
-        private void UpdateDirLabelBasic()
+        private void UpdateDirLabelWinFiles()
         {
             // Update the label with the current directory path
-            DirLabelBasic.Text = $"Directory: {DirPathTextBoxBasic.Text}";
+            DirLabelWinFiles.Text = $"Directory: {DirPathTextBoxWinFiles.Text}";
         }
         #endregion
 
@@ -572,10 +572,10 @@ namespace TcAiExamples
 
         private void tabControl_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            // Update DirLabelBasic with the current directory path
-            if (e.TabPage == WinDirBasicTabPage)
+            // Update DirLabelWinFiles with the current directory path
+            if (e.TabPage == WinFilesTabPage)
             {
-                UpdateDirLabelBasic();
+                UpdateDirLabelWinFiles();
             }
             else if (e.TabPage == WinDirAdvTabPage)
             {
@@ -586,15 +586,15 @@ namespace TcAiExamples
         private void Form1_Load(object sender, EventArgs e)
         {
             // Set the initial directory path for the basic tab
-            UpdateDirLabelBasic();
+            UpdateDirLabelWinFiles();
 
         }
 
-        private void OpenFileButtonBasic_Click(object sender, EventArgs e)
+        private void OpenFileButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Open the file at DirPathTextBoxBasic.Text with the name at FileNameTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
-            string fileName = FileNameTextBoxBasic.Text;
+            // Open the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
+            string fileName = FileNameTextBoxWinFiles.Text;
             // Check if the path and file name are valid
             if (string.IsNullOrEmpty(path))
             {
@@ -622,15 +622,15 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error opening file: {ex.Message}");
             }
-            // Update the DirListBoxBasic.text
-            UpdateListBoxBasic();
+            // Update the DirListBoxWinFiles.text
+            UpdateListBoxWinFiles();
         }
 
-        private void DelFileButtonBasic_Click(object sender, EventArgs e)
+        private void DelFileButtonWinFiles_Click(object sender, EventArgs e)
         {
-            // Delete the file at DirPathTextBoxBasic.Text with the name at FileNameTextBoxBasic.Text
-            string path = DirPathTextBoxBasic.Text;
-            string fileName = FileNameTextBoxBasic.Text;
+            // Delete the file at DirPathTextBoxWinFiles.Text with the name at FileNameTextBoxWinFiles.Text
+            string path = DirPathTextBoxWinFiles.Text;
+            string fileName = FileNameTextBoxWinFiles.Text;
             if (string.IsNullOrEmpty(path))
             {
                 MessageBox.Show("Please enter a valid path.");
@@ -665,8 +665,8 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error deleting file: {ex.Message}");
             }
-            // Update the DirListBoxBasic.text
-            UpdateListBoxBasic();
+            // Update the DirListBoxWinFiles.text
+            UpdateListBoxWinFiles();
         }
     }
 }
