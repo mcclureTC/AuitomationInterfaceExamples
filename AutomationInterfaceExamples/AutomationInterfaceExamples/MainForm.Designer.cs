@@ -270,6 +270,7 @@ namespace TcAiExamples
             MoveButton.TabIndex = 20;
             MoveButton.Text = "Move File";
             MoveButton.UseVisualStyleBackColor = true;
+            MoveButton.Click += MoveButton_Click;
             // 
             // CopyButton
             // 
