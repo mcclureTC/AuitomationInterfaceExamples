@@ -559,9 +559,46 @@ namespace TcAiExamples
             {
                 MessageBox.Show($"Error copying selected item: {ex.Message}");
             }
+            
         }
 
+        private void MoveButton_Click(object sender, EventArgs e)
+        {
+            // Move the selected file or directory in the ListBox from the FromDirTextBox.Text to the ToDirTextBox.Text
+            if (FileListBox.SelectedItem == null)
+            {
+                MessageBox.Show("Please select a file or directory from the ListBox.");
+                return;
+            }
+            string selectedItem = FileListBox.SelectedItem.ToString();
+            string fromPath = FromDirTextBox.Text;
+            string toPath = ToDirTextBox.Text;
+            if (string.IsNullOrEmpty(fromPath) || string.IsNullOrEmpty(toPath))
+            {
+                MessageBox.Show("Please enter valid paths.");
+                return;
+            }
+            try
+            {
+                string fullFromPath = Path.Combine(fromPath, selectedItem);
+                string fullToPath = Path.Combine(toPath, selectedItem);
+                if (File.Exists(fullFromPath))
+                {
+                    File.Move(fullFromPath, fullToPath);
+                    MessageBox.Show($"File moved from {fullFromPath} to {fullToPath}");
+                }
+                else
+                {
+                    MessageBox.Show($"File or directory does not exist at {fullFromPath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error moving selected item: {ex.Message}");
+            }
+            
 
+        }
         #endregion
 
 
